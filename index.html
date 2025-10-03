@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mellow — Sunglasses (Coming Soon)</title>
+  <meta name="description" content="Mellow — mid-century modern sunglasses. Limited drops. Join the list to get notified." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.88em%22 font-size=%2290%22>🕶️</text></svg>">
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Headings use Playfair for that retro editorial vibe -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Decorative background shapes -->
+  <div class="bg-pattern"></div>
+  <div class="bg-boomerang boomerang-1" aria-hidden="true"></div>
+  <div class="bg-boomerang boomerang-2" aria-hidden="true"></div>
+  <div class="bg-star star-1" aria-hidden="true"></div>
+  <div class="bg-star star-2" aria-hidden="true"></div>
+
+  <!-- Permanent Countdown (brand font on numbers) -->
+  <div class="announce" role="region" aria-label="Launch countdown">
+    <div class="announce-inner">
+      <span class="announce-pill">Limited Drop</span>
+      <span class="announce-text">
+        Launch in
+        <span class="countdown" aria-live="polite">
+          <span id="dd">00</span>d :
+          <span id="hh">00</span>h :
+          <span id="mm">00</span>m :
+          <span id="ss">00</span>s
+        </span>
+      </span>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Transparent→Solid Nav -->
+    <nav class="nav" aria-label="Primary">
+      <h1 class="logo">MELLOW</h1>
+      <div class="nav-links">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <main class="hero">
+      <div class="hero-card">
+        <p class="eyebrow">Sunglasses Drop</p>
+        <h2 class="hero-title">Timeless Design. <span class="script-accent">Warm</span> Palettes. Limited Drops.</h2>
+        <p class="hero-subtitle">Join Mellow and get updates on the latest drops.</p>
+
+        <form class="email-form" id="emailForm" aria-label="Email signup">
+          <div class="form-group">
+            <input type="email" id="email" placeholder="Enter your email" required aria-label="Email address" />
+            <button type="submit" class="btn-primary" id="notifyBtn">
+              Notify Me
+              <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 5l7 7-7 7M3 12h17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <p class="form-message" id="formMessage" role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="badge-row" aria-hidden="true">
+          <span class="badge">Hand-finished</span>
+          <span class="dot">•</span>
+          <span class="badge">Small-batch</span>
+          <span class="dot">•</span>
+          <span class="badge">Sustainable</span>
+        </div>
+      </div>
+    </main>
+
+    <!-- Feature “tiles” in a retro grid -->
+    <section class="tiles" aria-label="Highlights">
+      <article class="tile tile-walnut">
+        <div class="tile-icon">🪵</div>
+        <h3>Walnut & Warm Metals</h3>
+        <p>Classic materials meet modern tolerances for that heirloom feel.</p>
+      </article>
+      <article class="tile tile-ochre">
+        <div class="tile-icon">🔆</div>
+        <h3>Optics That Feel Good</h3>
+        <p>Comfort-tuned lenses with mellow hues and UV400 protection.</p>
+      </article>
+      <article class="tile tile-avocado">
+        <div class="tile-icon">♻️</div>
+        <h3>Considered & Circular</h3>
+        <p>Responsible packaging and thoughtful, repair-friendly construction.</p>
+      </article>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="panel">
+      <div class="panel-inner">
+        <h2 class="panel-title">About Mellow</h2>
+        <p class="panel-copy">
+          Mellow is more than just sunglasses—it’s a lifestyle rooted in timeless design, mid-century modern elegance, and a laid-back confidence that never goes out of style. Inspired by the golden era of the 70s and reimagined for today, Mellow creates eyewear that blends nostalgia with forward-thinking minimalism.
+Every pair is crafted to feel effortless, versatile, and iconic—whether you’re walking across campus, hitting the beach, or stepping into the night. With limited-run drops and accessible pricing, Mellow makes luxury feel approachable while keeping exclusivity alive.
+We believe great style should feel natural. That’s why Mellow frames are designed to stand the test of time, elevating the everyday while becoming part of your story.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="panel panel-scallop">
+      <div class="panel-inner">
+        <h2 class="panel-title">Contact</h2>
+        <p class="panel-copy">Questions, press, or collabs? Reach us at <a href="mailto:ember-quickly-ion@duck.com">Support@mellow.shop</a>.</p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; <span id="year"></span> <span class="footer-logo">Mellow</span>. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
